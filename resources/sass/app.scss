@@ -6,3 +6,6 @@ $fa-font-path: "../fonts/font-awesome" !default;
 @import "~@fortawesome/fontawesome-free/scss/regular";
 @import "~@fortawesome/fontawesome-free/scss/solid";
 @import "~@fortawesome/fontawesome-free/scss/brands";
+
+@import 'partials/_common.scss';
+@import 'partials/_main.scss';
