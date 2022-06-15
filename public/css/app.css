@@ -1,4 +1,4 @@
-@charset "UTF-8";
+@import url(https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap);@charset "UTF-8";
 /*!
  * Bootstrap v5.1.3 (https://getbootstrap.com/)
  * Copyright 2011-2021 The Bootstrap Authors
@@ -20508,8 +20508,327 @@ readers do not read off random characters that represent icons */
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
 }
 
-p {
+.jumbotron {
+  height: 300px;
+  position: relative;
+}
+.jumbotron img {
+  width: 100%;
+  height: 300px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: top;
+     object-position: top;
+}
+.jumbotron .comic-book {
+  text-transform: uppercase;
+  background-color: #4eb5de;
+  color: white;
   width: 50%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  font-size: 10px;
+  padding: 2px;
+  text-align: center;
+}
+.jumbotron .view {
+  text-transform: uppercase;
+  background-color: #4eb5de;
+  color: white;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  font-size: 10px;
+  text-align: center;
+  padding: 2px;
+}
+
+.content {
+  background-color: #1c1c1c;
+  padding: 80px 30px 20px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  position: relative;
+}
+.content .title {
+  position: absolute;
+  top: -15px;
+  left: 25px;
+  width: 200px;
+  height: 50px;
+  color: white;
+  background-color: #0282f9;
+  font-size: 10px;
+  text-align: center;
+  line-height: 50px;
+  text-transform: uppercase;
+  box-shadow: 0px 2px 2px 2px #1c1c1c;
+}
+.content .button {
+  background-color: #0282f9;
+  width: 170px;
+  height: 50px;
+  text-align: center;
+  line-height: 50px;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+.content .button a {
+  color: white;
+  font-size: 14px;
+}
+
+.image-container {
+  background-color: #0282f9;
+  display: flex;
+  justify-content: space-around;
+}
+.image-container ul {
+  list-style-type: none;
+  padding: 20px;
+  text-transform: uppercase;
+  color: white;
+  align-items: center;
+  display: flex;
+}
+.image-container li {
+  padding: 10px;
+}
+.image-container img {
+  width: 30px;
+  height: 40px;
+}
+
+.card {
+  margin: 0px 20px 60px;
+  background-color: #000;
+}
+.card img {
+  height: 150px;
+  width: 150px;
+}
+.card h2, .card .h2 {
+  padding-top: 10px;
+  color: white;
+  font-size: 12px;
+  text-transform: uppercase;
+  width: 160px;
+}
+
+.image-hover {
+  width: 150px;
+  position: absolute;
+  bottom: -40px;
+  left: 300px;
+  z-index: 200;
+}
+.image-hover img {
+  height: 220px;
+}
+
+.line {
+  height: 60px;
+  background-color: #0282f8;
+}
+
+.main-up {
+  padding: 5% 20%;
+  position: relative;
+}
+.main-up .center {
+  width: 60%;
+}
+.main-up h2, .main-up .h2 {
+  color: #003f5f;
+  text-transform: uppercase;
+}
+.main-up .green-line {
+  background-color: #55ba59;
+  padding: 10px 0px 10px 10px;
+}
+.main-up .col-sx {
+  display: inline;
+}
+.main-up .col-dx {
+  display: inline;
+}
+.main-up p {
+  color: #827781;
+  line-height: 25px;
+  font-size: 14px;
+}
+.main-up .price {
+  color: white;
+}
+.main-up .available {
+  padding-left: 25%;
+}
+.main-up .check {
+  color: white;
+  padding-left: 5%;
+}
+.main-up .adv {
+  position: absolute;
+  right: 20%;
+  top: 20%;
+}
+.main-up .adv h4, .main-up .adv .h4 {
+  text-transform: uppercase;
+  padding-left: 58%;
+  color: #8f8e8e;
+}
+
+.main-down {
+  padding: 0 20% 10%;
+  background-color: #f6f6f6;
+  position: relative;
+}
+.main-down h3, .main-down .h3 {
+  color: #003f5f;
+  padding: 20px 0px;
+}
+.main-down h6, .main-down .h6 {
+  color: #003f5f;
+  padding: 10px 0;
+}
+.main-down .artist {
+  color: #4eb5de;
+  margin-left: 5px;
+}
+.main-down .sale {
+  margin-left: 5px;
+}
+.main-down .col-left {
+  display: inline-block;
+  width: 45%;
+  line-height: 15px;
+}
+.main-down .col-right {
+  display: inline-block;
+  width: 25%;
+  position: absolute;
+  top: 0;
+  right: 20%;
+}
+.main-down .box {
+  position: absolute;
+  bottom: 0;
+}
+.main-down .box-center {
+  display: inline-block;
+  color: #d8d8d8;
+  padding-left: 100px;
+}
+.main-down .box-center img {
+  width: 50%;
+}
+
+.logo {
+  display: flex;
+  margin: 10px;
+  justify-content: space-around;
+}
+.logo img {
+  width: 5%;
+}
+
+nav {
+  background-color: white;
+  display: flex;
+  align-items: center;
+}
+
+li {
+  text-transform: uppercase;
+  list-style-type: none;
+  display: inline-block;
+  justify-content: space-around;
+  padding: 12px;
+  font-size: 13px;
+  cursor: pointer;
+}
+li a {
+  text-decoration: none;
+  color: black;
+}
+
+.selected {
+  border-bottom: 5px solid #0282f9;
+  color: #0282f9;
+}
+
+.footer-top {
+  background-image: url("../img/footer-bg.jpg");
+  background-size: cover;
+  width: 100%;
+  display: flex;
+  overflow: hidden;
+  position: relative;
+}
+.footer-top ul {
+  list-style-type: none;
+  padding: 10px 30px;
+}
+.footer-top .shop {
+  margin-left: -30px;
+}
+.footer-top h3, .footer-top .h3 {
+  color: white;
+  padding: 5px 0px;
+  text-transform: uppercase;
+}
+.footer-top li {
+  color: #8f8e8e;
+  padding: 2px;
+  display: block;
+  text-transform: capitalize;
+}
+.footer-top img {
+  position: absolute;
+  top: -50px;
+  right: 100px;
+  height: 130%;
+}
+
+.footer-down {
+  background-color: #303030;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px 20px;
+}
+.footer-down .btn {
+  border: 2px solid #0282f8;
+  width: 140px;
+  height: 50px;
+  line-height: 50px;
+  text-align: center;
+}
+.footer-down a {
+  text-decoration: none;
+  text-transform: uppercase;
+  color: white;
+}
+.footer-down .icons {
+  display: flex;
+  justify-content: end;
+}
+.footer-down h4, .footer-down .h4 {
+  display: flex;
+  align-items: center;
+  text-transform: uppercase;
+  color: #0282f8;
+}
+.footer-down li {
+  display: inline-block;
+  list-style: none;
+  padding: 10px;
+}
+.footer-down img {
+  width: 100%;
 }

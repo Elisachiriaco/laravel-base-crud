@@ -1,3 +1,215 @@
-p{
-    width: 50%;
+.jumbotron{
+    height: 300px;
+    position: relative;
+    img{
+        width: 100%;
+        height: 300px;
+        object-fit: cover;
+        object-position: top;
+    }
+    .comic-book{
+        text-transform: uppercase;
+        background-color: $artist;
+        color: $bgwhite;
+        width: 50%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        font-size: 10px;
+        padding: 2px;
+        text-align: center;
+    }
+    .view{
+        text-transform: uppercase;
+        background-color: $artist;
+        color: $bgwhite;
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+        font-size: 10px;
+        text-align: center;
+        padding: 2px;
+    }
+}
+
+.content{
+    background-color: $bgmain;
+    padding: 80px 30px 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    position: relative;
+
+    .title{
+        position: absolute;
+        top: -15px;
+        left: 25px;
+        width: 200px;
+        height: 50px;
+        color: $bgwhite;
+        background-color: $bgazzurro;
+        font-size: 10px;
+        text-align: center;
+        line-height: 50px;
+        text-transform: uppercase;
+        box-shadow: 0px 2px 2px 2px $bgmain;
+    }
+    .button{
+        background-color: $bgazzurro;
+        width: 170px;
+        height: 50px; 
+        text-align: center;
+        line-height: 50px;
+        text-decoration: none;
+        text-transform: uppercase;
+    a{
+        color: $bgwhite;
+        font-size: 14px;
+    }
+    }
+}
+
+.image-container{
+    background-color: $bgazzurro;
+    display:flex;
+    justify-content: space-around;
+
+    ul{
+        list-style-type: none;
+        padding: 20px;
+        text-transform: uppercase;
+        color: $bgwhite;
+        align-items: center;
+        display: flex;
+    }
+    li{
+        padding: 10px;
+    }
+    img{
+        width:30px;
+        height:40px;
+    }
+}
+
+.card{
+    margin: 0px 20px 60px;
+    background-color: $black;
+    img{
+        height: 150px;
+        width: 150px;
+    }
+    h2{
+        padding-top: 10px;
+        color: $bgwhite;
+        font-size: 12px;
+        text-transform: uppercase;
+        width: 160px;
+    }
+}
+
+.image-hover{
+    width: 150px;
+    position: absolute;
+    bottom: -40px;
+    left: 300px;
+    z-index: 200;
+    img{
+        height: 220px;
+    }
+}
+
+.line{
+    height: 60px;
+    background-color: $blue;
+}
+
+.main-up{
+    padding: 5% 20%;
+    position: relative;
+    .center{
+        width: 60%;
+    }
+    h2{
+        color: $title;
+        text-transform: uppercase;
+    }
+    .green-line{
+        background-color: $green;
+        padding: 10px 0px 10px 10px;
+    }
+    .col-sx{
+        display: inline;
+    }
+    .col-dx{
+        display: inline;
+    }
+    p{
+        color: $description;
+        line-height: 25px;
+        font-size: 14px;
+    }
+    .price{
+        color: $bgwhite;
+    }
+    .available{
+        padding-left: 25%;
+    }
+    .check{
+        color: $bgwhite;
+        padding-left: 5%;
+    }
+    .adv{
+        position: absolute;
+        right: 20%;
+        top: 20%;
+        h4{
+            text-transform: uppercase;
+            padding-left: 58%;
+            color: $grey;
+        }
+    }
+}
+.main-down{
+    padding: 0 20% 10%;
+    background-color: $bgcomic;
+    position: relative;
+    h3{
+        color: $title;
+        padding: 20px 0px;
+    }
+    h6{
+        color: $title;
+        padding: 10px 0;
+    }
+    .artist{
+        color: $artist;
+        margin-left: 5px;
+    }
+    .sale{
+        margin-left: 5px;
+    }
+    .col-left{
+        display: inline-block;
+        width: 45%;
+        line-height: 15px;
+    }
+    .col-right{
+        display: inline-block;
+        width: 25%;
+        position: absolute;
+        top: 0;
+        right:20%;
+    }
+    .box{
+        position: absolute;
+        bottom: 0;
+    }
+    .box-center{
+        display: inline-block;
+        color: $light;
+        padding-left: 100px;
+        img{
+            width: 50%;
+        }
+    }
 }
