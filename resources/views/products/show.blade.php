@@ -12,6 +12,7 @@
                 Data di vendita: {{$product->sale_date}}
             </p>
         </div>
+        <div><a href="{{route('products.index')}}" class="btn btn-info">Ritorna ai fumetti</a></div>
         </div>
     </main>
 @endsection

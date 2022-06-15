@@ -15,8 +15,6 @@
                 <th scope="col">Tipo</th>
                 <th scope="col">Prezzo</th>
                 <th scope="col">Visualizza</th>
-                <th scope="col">Modifica</th>
-                <th scope="col">Cancella</th>
               </tr>
             </thead>
             <tbody>
@@ -28,8 +26,6 @@
                 <td>{{$prodotto->type}}</td>
                 <td>{{$prodotto->price}}</td>
                 <td><a href="{{route('products.show',$prodotto->id)}}" class="btn btn-info">Visualizza</a></td>
-                <td><a href="{{route('products.show',$prodotto->id)}}" class="btn btn-warning">Modifica</a></td>
-                <td><a href="{{route('products.show',$prodotto->id)}}" class="btn btn-danger">Cancella</a></td>
               </tr>
               @endforeach
             </tbody>
