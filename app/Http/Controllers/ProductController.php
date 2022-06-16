@@ -36,7 +36,21 @@ class ProductController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $data = $request->all();
+        $newProduct = new Product();
+        $newProduct->title = $data['title'];
+        if(!empty($data['description'])){
+            $newProduct->description = $data['description'];
+        }
+        $newProduct->image = $data['image'];
+        $newProduct->price = $data['price'];
+        $newProduct->series = $data['series'];
+        $newProduct->sale_date = $data['sale_date'];
+        $newProduct->type = $data['type'];
+
+        $newProduct->save();
+
+        return redirect()->route('products.show',$newProduct->id);
     }
 
     /**
@@ -58,7 +72,8 @@ class ProductController extends Controller
      */
     public function edit($id)
     {
-        //
+        $product = Product::findOrFail($id);
+        return view('products.edit', compact('product'));
     }
 
     /**
@@ -70,7 +85,20 @@ class ProductController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $data = $request->all();
+        $product = Product::findOrFail($id);
+        $product->title = $data['title'];
+        if(!empty($data['description'])){
+            $product->description = $data['description'];
+        }
+        $product->image = $data['image'];
+        $product->price = $data['price'];
+        $product->series = $data['series'];
+        $product->type = $data['type'];
+
+        $product->save();
+
+        return redirect()->route('products.show',$product->id);        
     }
 
     /**
@@ -81,6 +109,8 @@ class ProductController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $product = Product::findOrFail($id);
+        $product->delete();
+        return redirect()->route('products.index');
     }
 }
