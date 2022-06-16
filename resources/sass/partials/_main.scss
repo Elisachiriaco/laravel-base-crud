@@ -105,6 +105,9 @@
         text-transform: uppercase;
         width: 160px;
     }
+    button{
+        background-color: $bgazzurro;
+    }
 }
 
 .image-hover{
@@ -212,4 +215,9 @@
             width: 50%;
         }
     }
+}
+.main-insert{
+    width: 70%;
+    text-align: center;
+    padding-left: 30%;
 }

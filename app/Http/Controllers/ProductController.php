@@ -45,7 +45,6 @@ class ProductController extends Controller
         $newProduct->image = $data['image'];
         $newProduct->price = $data['price'];
         $newProduct->series = $data['series'];
-        $newProduct->sale_date = $data['sale_date'];
         $newProduct->type = $data['type'];
 
         $newProduct->save();

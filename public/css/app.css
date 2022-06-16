@@ -20619,6 +20619,9 @@ readers do not read off random characters that represent icons */
   text-transform: uppercase;
   width: 160px;
 }
+.card button {
+  background-color: #0282f9;
+}
 
 .image-hover {
   width: 150px;
@@ -20728,6 +20731,12 @@ readers do not read off random characters that represent icons */
   width: 50%;
 }
 
+.main-insert {
+  width: 70%;
+  text-align: center;
+  padding-left: 30%;
+}
+
 .logo {
   display: flex;
   margin: 10px;
@@ -20758,7 +20767,7 @@ li a {
 }
 
 .selected {
-  border-bottom: 5px solid #0282f9;
+  border-bottom: 2px solid #0282f9;
   color: #0282f9;
 }
 

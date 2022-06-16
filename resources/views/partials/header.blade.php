@@ -3,9 +3,9 @@
         <img src="{{asset('../img/dc-logo.png')}}" alt="logo">
       <nav>
         <ul>
-          <li><a href="{{route('products.index')}}">Characters</a></li>
-          <li><a href="/">Comics</a></li>
-          <li><a href="#">Movies</a></li>
+          <li><a href="\" class="{{Route::currentRouteName()=='home' ? 'selected' :''}}">Home</a></li>
+          <li><a href="{{route('products.index')}}" class=" {{Route::currentRouteName()=='products.index' ? 'selected' : ''}}">Comics</a></li>
+          <li><a href="{{route('products.create')}}" class="{{Route::currentRouteName()=='products.create' ? 'selected' : ''}}">New Comic</a></li>
           <li><a href="#">TV</a></li>
           <li><a href="#">Games</a></li>
           <li><a href="#">Collectibles</a></li>

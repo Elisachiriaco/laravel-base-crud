@@ -17,13 +17,13 @@
                   <img src="{{$prodotto->image}}" alt="{{$prodotto->title}}">
                   <h2><a href="{{route('products.show',$prodotto->id)}}">{{$prodotto->title}}</a></h2>
                   <p><a href="{{route('products.edit',$prodotto->id)}}">Modifica</a></p>
-                  <form action="{{route('products.destroy',$prodotto->id)}}">
+                  <form action="{{route('products.destroy',$prodotto->id)}}" method="POST">
                     @csrf
                     @method('DELETE')
-                  <button type="submit">Cancella</button>
+                    <button type="submit">Cancella</button>
                     </form>
-              </div>
-              @endforeach
+                </div>
+                @endforeach
               
               <div class="button">
                   <a href="#">Load more</a>
