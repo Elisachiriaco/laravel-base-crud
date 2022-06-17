@@ -9,7 +9,10 @@
           @csrf 
             <div class="mb-3">
               <label for="title">Title</label>
-              <input type="text" class="form-control" id="title" aria-describedby="title" name="title" placeholder="Insert title">
+              <input type="text" class="form-control @error('title') is-invalid @enderror" id="title" aria-describedby="title" name="title" placeholder="Insert title" value="{{old('title')}}">
+              @error('title')
+                  {{$message}}
+              @enderror
             </div>
             <div class="mb-3">
               <label for="description" class="form-label">Description</label>
@@ -24,15 +27,21 @@
             </div>
             <div class="mb-3">
               <label for="image" class="form-label">Image Url</label>
-              <input type="text" class="form-control" id="image" aria-describedby="image" name="image" placeholder="Insert Image">
+              <input type="text" class="form-control @error('image') is-invalid @enderror" id="image" aria-describedby="image" name="image" placeholder="Insert Image" value="{{old('image')}}">
+              @error('image')
+              {{$message}}
+              @enderror
             </div>
             <div class="mb-3">
               <label for="price">Price</label>
-              <input type="text" class="form-control" id="price" name="price" placeholder="Insert Price" aria-describedby="price">
+              <input type="text" class="form-control" id="price" name="price" placeholder="Insert Price" aria-describedby="price" max="99,99">
             </div>
             <div class="mb-3">
               <label for="series">Series</label>
-              <input type="text" class="form-control" id="series" name="series" placeholder="Insert Series" aria-describedby="series">
+              <input type="text" class="form-control @error('series') is-invalid @enderror" id="series" name="series" placeholder="Insert Series" aria-describedby="series" value="{{old('series')}}">
+              @error('series')
+              {{$message}}
+               @enderror
             </div>
             <button type="submit" class="btn btn-primary mb-4">Save</button>
           </form>

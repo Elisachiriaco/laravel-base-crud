@@ -28,6 +28,12 @@
             <img src="{{asset('img/adv.jpg')}}" alt="advertisement">
             </div>
             </div>
+            <div id="demo"></div>
+            <form id="formdelete" action="{{route('products.destroy',$product->id)}}" method="POST">
+                @csrf 
+                @method('DELETE')
+                <button id="mybutton" type="submit">Cancella</button>
+            </form>
         </div>
         <div class="main-down">
             <div class="col-left">

@@ -7,6 +7,12 @@ use App\Product;
 
 class ProductController extends Controller
 {
+    protected $validationRule = [
+        'title' => 'required|max:150',
+        'image' => 'required|max:255',
+        'type' => 'required|max:50',
+        'series' => 'required|max:100',
+    ];
     /**
      * Display a listing of the resource.
      *
@@ -36,6 +42,7 @@ class ProductController extends Controller
      */
     public function store(Request $request)
     {
+        $request->validate($this->validationRule);
         $data = $request->all();
         $newProduct = new Product();
         $newProduct->title = $data['title'];
